@@ -1,2 +1,1 @@
-# Vanessas Vanilla Weather App
- 
+# Vanessa's Vanilla Weather App
