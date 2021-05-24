@@ -1,0 +1,150 @@
+form {
+  float: left;
+}
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+hr.line {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-top: none;
+}
+.container {
+  margin: 0 auto;
+  padding-top: 60px;
+}
+.inner-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.fa-map-marker-alt {
+  color: #880000;
+  font-size: 20px;
+}
+.card.main {
+  margin: 0 auto;
+  border: 1px solid #00c2c2;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #b4bcb0;
+  background: linear-gradient(
+    91.9deg,
+    rgb(93, 248, 219) 27.8%,
+    rgb(33, 228, 246) 67%
+  );
+}
+.card.header {
+  padding: 10px 10px 4px 20px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(101, 255, 253) 0%,
+    rgb(36, 153, 238) 90%
+  );
+}
+.card-body.header {
+  padding: 10px 15px 10px 15px;
+}
+.location {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+}
+.date {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.row.today-forecast {
+  margin-bottom: 150px;
+}
+.card.forecast-results {
+  padding: 15px 20px 15px 20px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border: none;
+  background: none;
+}
+.current-weather-icon {
+  display: block;
+  margin: 0 auto;
+  margin-top: 0;
+  padding-top: 0;
+  width: 90px;
+}
+.current-weather-description {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+span.current-temperature {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  right: 10px;
+  font-size: 60px;
+  font-weight: 500;
+  color: #000;
+}
+a.temperature-unit {
+  font-size: 13px;
+  color: #000;
+  padding: 0;
+  margin: 0;
+}
+a.temperature-unit:hover {
+  cursor: pointer;
+}
+.celcius {
+  position: relative;
+  right: 10px;
+  bottom: 30px;
+}
+.farenheit {
+  position: relative;
+  right: 40px;
+  bottom: 5px;
+}
+
+.celcius.active {
+  position: relative;
+  right: 10px;
+  bottom: 25px;
+  font-size: 25px;
+  cursor: default;
+  font-weight: bold;
+}
+
+.farenheit.active:hover {
+  text-decoration: none;
+}
+
+.farenheit.active {
+  font-size: 25px;
+  cursor: default;
+  font-weight: bold;
+  position: relative;
+  right: 28px;
+  bottom: 5px;
+}
+
+.celcius.active:hover {
+  text-decoration: none;
+}
+
+.col-4.weather-details {
+  padding-top: 18px;
+}
+p.weather-details {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.info-text {
+  font-size: 12px;
+  text-align: center;
+  padding-top: 15px;
+  color: #000091;
+}
