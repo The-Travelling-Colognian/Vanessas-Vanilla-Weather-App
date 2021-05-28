@@ -1,27 +1,34 @@
 form {
   float: left;
 }
+
 p {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
+  color: #000;
 }
+
 hr.line {
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-top: none;
 }
+
 .container {
   margin: 0 auto;
   padding-top: 60px;
 }
+
 .inner-container {
   max-width: 800px;
   margin: 0 auto;
 }
+
 .fa-map-marker-alt {
   color: #880000;
   font-size: 20px;
 }
+
 .card.main {
   margin: 0 auto;
   border: 1px solid #00c2c2;
@@ -33,6 +40,7 @@ hr.line {
     rgb(33, 228, 246) 67%
   );
 }
+
 .card.header {
   padding: 10px 10px 4px 20px;
   border-bottom-right-radius: 0;
@@ -45,22 +53,28 @@ hr.line {
     rgb(36, 153, 238) 90%
   );
 }
+
 .card-body.header {
   padding: 10px 15px 10px 15px;
 }
+
 .location {
   font-family: "Poppins", sans-serif;
   font-size: 30px;
+  color: #000;
 }
+
 .date {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
+
 .row.today-forecast {
   margin-bottom: 150px;
 }
+
 .card.forecast-results {
   padding: 15px 20px 15px 20px;
   border-top-right-radius: 0;
@@ -68,6 +82,7 @@ hr.line {
   border: none;
   background: none;
 }
+
 .current-weather-icon {
   display: block;
   margin: 0 auto;
@@ -75,11 +90,13 @@ hr.line {
   padding-top: 0;
   width: 90px;
 }
+
 .current-weather-description {
   text-align: center;
   text-transform: capitalize;
   font-size: 13px;
 }
+
 span.current-temperature {
   font-family: "Poppins", sans-serif;
   position: relative;
@@ -88,21 +105,25 @@ span.current-temperature {
   font-weight: 500;
   color: #000;
 }
+
 a.temperature-unit {
   font-size: 13px;
   color: #000;
   padding: 0;
   margin: 0;
 }
+
 a.temperature-unit:hover {
   cursor: pointer;
 }
+
 .celcius {
   position: relative;
   right: 10px;
   bottom: 30px;
 }
-.farenheit {
+
+.fahrenheit {
   position: relative;
   right: 40px;
   bottom: 5px;
@@ -117,11 +138,11 @@ a.temperature-unit:hover {
   font-weight: bold;
 }
 
-.farenheit.active:hover {
+.fahrenheit.active:hover {
   text-decoration: none;
 }
 
-.farenheit.active {
+.fahrenheit.active {
   font-size: 25px;
   cursor: default;
   font-weight: bold;
@@ -137,6 +158,7 @@ a.temperature-unit:hover {
 .col-4.weather-details {
   padding-top: 18px;
 }
+
 p.weather-details {
   margin-bottom: 0;
   font-size: 14px;
@@ -147,4 +169,176 @@ p.weather-details {
   text-align: center;
   padding-top: 15px;
   color: #000091;
+}
+
+@media only screen and (max-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .form-inline {
+    display: contents;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 720px;
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .inner-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .card-body.header {
+    padding: 5px 15px 10px 5px;
+  }
+
+  .form-inline {
+    display: flex;
+  }
+  .card-body {
+    padding: 20px 5px;
+  }
+}
+.location {
+  font-size: 25px;
+}
+.date {
+  font-size: 18px;
+}
+.current-weather-description {
+  font-size: 12px;
+}
+span.current-temperature {
+  font-size: 45px;
+}
+a.temperature-unit {
+  font-size: 12px;
+  color: #000;
+  padding: 0;
+  margin: 0;
+}
+
+.celsius {
+  position: relative;
+  right: 10px;
+  bottom: 20px;
+}
+.fahrenheit {
+  position: relative;
+  right: 40px;
+  top: 10px;
+}
+
+.celsius.active {
+  position: relative;
+  right: 10px;
+  bottom: 15px;
+  font-size: 25px;
+}
+
+.fahrenheit.active {
+  font-size: 25px;
+  cursor: default;
+  font-weight: bold;
+  position: relative;
+  right: 30px;
+  bottom: 30px;
+}
+.row.today-forecast {
+  margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 400px) {
+  .container,
+  .container-md,
+  .container-sm {
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px 0px 20px;
+  }
+  .inner-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card-body.header {
+    padding: 0px 15px 10px 0;
+  }
+
+  .form-inline {
+    display: flex;
+  }
+  card-body {
+    padding: 20px 5px;
+  }
+  .card.forecast-results {
+    padding: 15px 5px;
+  }
+  .location {
+    font-size: 25px;
+  }
+  .date {
+    font-size: 18px;
+  }
+  .current-weather-icon {
+    width: 60px;
+  }
+  .current-weather-description {
+    font-size: 12px;
+  }
+  span.current-temperature {
+    font-size: 45px;
+  }
+  a.temperature-unit {
+    font-size: 13px;
+    color: #000;
+    padding: 0;
+    margin: 0;
+  }
+  .celsius {
+    position: relative;
+    right: 10px;
+    bottom: 20px;
+  }
+  .fahrenheit {
+    position: relative;
+    left: 55px;
+    top: -25px;
+  }
+  .celsius.active {
+    position: relative;
+    right: 10px;
+    bottom: 15px;
+    font-size: 25px;
+  }
+  .fahrenheit.active {
+    font-size: 25px;
+    cursor: default;
+    font-weight: bold;
+    position: relative;
+    right: 30px;
+    top: -35px;
+  }
+  row.today-forecast {
+    margin-bottom: 50px;
+  }
+}
+
+.info-text {
+  text-align: center;
+  padding-top: 40px;
+  color: #240849;
 }
