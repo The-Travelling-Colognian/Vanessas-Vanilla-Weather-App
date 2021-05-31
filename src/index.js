@@ -159,3 +159,10 @@ fahrenheitButton.addEventListener("click", convertToFahrenheit);
 
 let celsiusButton = document.querySelector("#unit-celsius");
 celsiusButton.addEventListener("click", convertToCelsius);
+
+//Initial load
+axios
+  .get(
+    `https://api.openweathermap.org/data/2.5/weather?q=cologne,de&units=metric&appid=${apiKey}`
+  )
+  .then(showSearchedCityWeather);
