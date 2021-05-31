@@ -1,6 +1,7 @@
 let apiKey = "592ec9fec843be6f39db84cfa93ed174";
 let apiWeatherUrl = "api.openweathermap.org/data/2.5/weather";
 let units = "metric";
+
 function searchCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -19,9 +20,12 @@ function searchCity(event) {
       .then(showSearchedCityWeather);
   }
 }
-function formatDate() {
-  let now = new Date();
-  let hours = now.getHours();
+function formatDate(timezone) {
+  let time = new Date();
+  let localTimeOffset = time.getTimezoneOffset() * 60;
+  let UTC = time.setSeconds(time.getSeconds() + localTimeOffset);
+  time.setSeconds(time.getSeconds() + timezone);
+  let hours = time.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
@@ -59,20 +63,22 @@ function formatDate() {
 }
 let dateElement = document.querySelector("#current-date-time");
 dateElement.innerHTML = formatDate();
+
 function showSearchedCityWeather(response) {
   let currentTemp = document.querySelector("#current-temperature");
   currentTemp.innerHTML = Math.round(response.data.main.temp);
   //celciusTemperature = currentTemp.innerHTML;
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = `💦Humidity: ${response.data.main.humidity}%`;
+  humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let windSpeed = document.querySelector("#wind-speed");
-  windSpeed.innerHTML = `💨Wind: ${Math.round(
+  windSpeed.innerHTML = `Wind: ${Math.round(
     response.data.wind.speed * 3.6
   )} km/h`;
   let cityName = response.data.name;
   let countryCode = response.data.sys.country;
   let location = document.querySelector("#location-name");
   location.innerHTML = `${cityName}, ${countryCode}`;
+
   let weatherDescription = document.querySelector(
     "#current-weather-description"
   );
