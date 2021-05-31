@@ -62,7 +62,7 @@ function formatDate(timezone) {
   return `${day}, ${date} ${month}, ${hours}:${minutes}`;
 }
 let dateElement = document.querySelector("#current-date-time");
-dateElement.innerHTML = formatDate();
+dateElement.innerHTML = formatDate(response.data.timezone);
 
 function showSearchedCityWeather(response) {
   let currentTemp = document.querySelector("#current-temperature");
@@ -79,12 +79,20 @@ function showSearchedCityWeather(response) {
   let location = document.querySelector("#location-name");
   location.innerHTML = `${cityName}, ${countryCode}`;
 
+  let weatherIcon = document.querySelector("#current-weather-icon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
   let weatherDescription = document.querySelector(
     "#current-weather-description"
   );
   let weatherDescriptionValue = response.data.weather[0].description;
   weatherDescription.innerHTML = `${weatherDescriptionValue}`;
 }
+
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
