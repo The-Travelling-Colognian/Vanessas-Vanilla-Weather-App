@@ -91,6 +91,28 @@ function showSearchedCityWeather(response) {
   );
   let weatherDescriptionValue = response.data.weather[0].description;
   weatherDescription.innerHTML = `${weatherDescriptionValue}`;
+
+  axios
+    .get(
+      `${apiForecastUrl}?q=${cityName},${countryCode}&units=metric&appid=${apiKey}`
+    )
+    .then(displayForecast);
+}
+
+function formatHours(timezone, timestamp) {
+  let time = new Date(timestamp);
+  let localTimeOffset = time.getTimezoneOffset() * 60;
+  let UTC = time.setSeconds(time.getSeconds() + localTimeOffset);
+  time.setSeconds(time.getSeconds() + timezone);
+  let hours = time.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = time.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
 }
 
 function showPosition(position) {
