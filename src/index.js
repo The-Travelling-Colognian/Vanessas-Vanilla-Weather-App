@@ -22,9 +22,9 @@ function searchCity(event) {
 }
 function formatDate(timezone) {
   let time = new Date(timezone);
-  let localTimeOffset = time.getTimezoneOffset() * 60;
-  let UTC = time.setSeconds(time.getSeconds() + localTimeOffset);
-  time.setSeconds(time.getSeconds() + timezone);
+  // let localTimeOffset = time.getTimezoneOffset() * 60;
+  // let UTC = time.setSeconds(time.getSeconds() + localTimeOffset);
+  // time.setSeconds(time.getSeconds() + timezone);
   let hours = time.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
