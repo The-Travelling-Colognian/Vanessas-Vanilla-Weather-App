@@ -92,8 +92,8 @@ hr.line {
 }
 
 .current-weather-description {
-  text-align: center;
   text-transform: capitalize;
+  text-align: center;
   font-size: 16px;
 }
 
