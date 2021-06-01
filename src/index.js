@@ -91,8 +91,7 @@ function showSearchedCityWeather(response) {
   let weatherDescription = document.querySelector(
     "#current-weather-description"
   );
-  let weatherDescriptionValue = response.data.weather[0].description;
-  weatherDescription.innerHTML = `${weatherDescriptionValue}`;
+  weatherDescription.innerHTML = response.data.weather[0].description;
 
   axios
     .get(
