@@ -21,7 +21,7 @@ function searchCity(event) {
   }
 }
 function formatDate(timezone) {
-  let time = new Date();
+  let time = new Date(timezone);
   let localTimeOffset = time.getTimezoneOffset() * 60;
   let UTC = time.setSeconds(time.getSeconds() + localTimeOffset);
   time.setSeconds(time.getSeconds() + timezone);
@@ -29,7 +29,7 @@ function formatDate(timezone) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = now.getMinutes();
+  let minutes = time.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -42,8 +42,8 @@ function formatDate(timezone) {
     "Friday",
     "Saturday",
   ];
-  let day = days[now.getDay()];
-  let date = now.getDate();
+  let day = days[time.getDay()];
+  let date = time.getDate();
   let months = [
     "January",
     "February",
@@ -58,11 +58,12 @@ function formatDate(timezone) {
     "November",
     "December",
   ];
-  let month = months[now.getMonth()];
+  let month = months[time.getMonth()];
   return `${day}, ${date} ${month}, ${hours}:${minutes}`;
 }
 let dateElement = document.querySelector("#current-date-time");
-dateElement.innerHTML = formatDate(response.data.timezone);
+let now = new Date();
+dateElement.innerHTML = formatDate(now);
 
 function showSearchedCityWeather(response) {
   let currentTemp = document.querySelector("#current-temperature");
