@@ -131,7 +131,10 @@ function currentLocationSearch(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 let form = document.querySelector("form");
-form.addEventListener("submit", searchCity);
+form.addEventListener("submit", handleSubmit);
+
+search("Cologne, DE");
+
 let currentLocationButton = document.querySelector("#location-button");
 currentLocationButton.addEventListener("click", currentLocationSearch);
 
@@ -160,10 +163,3 @@ farenheitButton.addEventListener("click", convertToFarenheit);
 
 let celciusButton = document.querySelector("#unit-celcius");
 celciusButton.addEventListener("click", convertToCelcius);
-
-//Initial load
-axios
-  .get(
-    `https://api.openweathermap.org/data/2.5/weather?q=cologne,de&units=metric&appid=${apiKey}`
-  )
-  .then(showSearchedCityWeather);
