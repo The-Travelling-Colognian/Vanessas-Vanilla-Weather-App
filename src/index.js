@@ -140,11 +140,11 @@ currentLocationButton.addEventListener("click", currentLocationSearch);
 //Convert temperature units
 let celciusTemperature = null;
 
-function convertToFarenheit(event) {
+function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureValue = document.querySelector("#current-temperature");
-  let farenheitTemperature = Math.round((celciusTemperature * 9) / 5) + 32;
-  temperatureValue.innerHTML = farenheitTemperature;
+  let fahrenheitTemperature = Math.round((celciusTemperature * 9) / 5) + 32;
+  temperatureValue.innerHTML = fahrenheitTemperature;
   celciusButton.classList.remove("active");
   farenheitButton.classList.add("active");
 }
@@ -153,12 +153,12 @@ function convertToCelcius(event) {
   event.preventDefault();
   let temperatureValue = document.querySelector("#current-temperature");
   temperatureValue.innerHTML = celciusTemperature;
-  farenheitButton.classList.remove("active");
+  fahrenheitButton.classList.remove("active");
   celciusButton.classList.add("active");
 }
 
-let farenheitButton = document.querySelector("#unit-fahrenheit");
-farenheitButton.addEventListener("click", convertToFarenheit);
+let fahrenheitButton = document.querySelector("#unit-fahrenheit");
+fahrenheitButton.addEventListener("click", convertToFahrenheit);
 
 let celciusButton = document.querySelector("#unit-celcius");
 celciusButton.addEventListener("click", convertToCelcius);
