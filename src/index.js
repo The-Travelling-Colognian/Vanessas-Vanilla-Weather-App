@@ -69,6 +69,7 @@ function showSearchedCityWeather(response) {
   let currentTemp = document.querySelector("#current-temperature");
   currentTemp.innerHTML = Math.round(response.data.main.temp);
   //celciusTemperature = currentTemp.innerHTML;
+
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let windSpeed = document.querySelector("#wind-speed");
@@ -131,35 +132,39 @@ function currentLocationSearch(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 let form = document.querySelector("form");
-form.addEventListener("submit", handleSubmit);
-
-search("Cologne, DE");
-
+form.addEventListener("submit", searchCity);
 let currentLocationButton = document.querySelector("#location-button");
 currentLocationButton.addEventListener("click", currentLocationSearch);
 
 //Convert temperature units
-let celciusTemperature = null;
+let celsiusTemperature = null;
 
-function convertToFarenheit(event) {
+function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureValue = document.querySelector("#current-temperature");
-  let farenheitTemperature = Math.round((celciusTemperature * 9) / 5) + 32;
-  temperatureValue.innerHTML = farenheitTemperature;
-  celciusButton.classList.remove("active");
-  farenheitButton.classList.add("active");
+  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5) + 32;
+  temperatureValue.innerHTML = fahrenheitTemperature;
+  celsiusButton.classList.remove("active");
+  fahrenheitButton.classList.add("active");
 }
 
-function convertToCelcius(event) {
+function convertToCelsius(event) {
   event.preventDefault();
   let temperatureValue = document.querySelector("#current-temperature");
-  temperatureValue.innerHTML = celciusTemperature;
-  farenheitButton.classList.remove("active");
-  celciusButton.classList.add("active");
+  temperatureValue.innerHTML = celsiusTemperature;
+  fahrenheitButton.classList.remove("active");
+  celsiusButton.classList.add("active");
 }
 
-let farenheitButton = document.querySelector("#unit-farenheit");
-farenheitButton.addEventListener("click", convertToFarenheit);
+let fahrenheitButton = document.querySelector("#unit-fahrenheit");
+fahrenheitButton.addEventListener("click", convertToFahrenheit);
 
-let celciusButton = document.querySelector("#unit-celcius");
-celciusButton.addEventListener("click", convertToCelcius);
+let celsiusButton = document.querySelector("#unit-celsius");
+celsiusButton.addEventListener("click", convertToCelsius);
+
+//Initial load
+axios
+  .get(
+    `https://api.openweathermap.org/data/2.5/weather?q=cologne,de&units=metric&appid=${apiKey}`
+  )
+  .then(showSearchedCityWeather);
