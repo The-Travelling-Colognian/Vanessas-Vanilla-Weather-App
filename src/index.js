@@ -163,8 +163,4 @@ let celciusButton = document.querySelector("#unit-celcius");
 celciusButton.addEventListener("click", convertToCelcius);
 
 //Initial load
-axios
-  .get(
-    `https://api.openweathermap.org/data/2.5/weather?q=cologne,de&units=metric&appid=${apiKey}`
-  )
-  .then(showSearchedCityWeather);
+search("Cologne, DE");
