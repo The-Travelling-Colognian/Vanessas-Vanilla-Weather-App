@@ -1,5 +1,6 @@
 let apiKey = "592ec9fec843be6f39db84cfa93ed174";
 let apiWeatherUrl = "api.openweathermap.org/data/2.5/weather";
+let apiForecastUrl = "https://api.openweathermap.org/data/2.5/forecast";
 let units = "metric";
 
 function searchCity(event) {
