@@ -137,32 +137,6 @@ form.addEventListener("submit", searchCity);
 let currentLocationButton = document.querySelector("#location-button");
 currentLocationButton.addEventListener("click", currentLocationSearch);
 
-//Convert temperature units
-let celsiusTemperature = null;
-
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureValue = document.querySelector("#current-temperature");
-  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5) + 32;
-  temperatureValue.innerHTML = fahrenheitTemperature;
-  celsiusButton.classList.remove("active");
-  fahrenheitButton.classList.add("active");
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureValue = document.querySelector("#current-temperature");
-  temperatureValue.innerHTML = celsiusTemperature;
-  fahrenheitButton.classList.remove("active");
-  celsiusButton.classList.add("active");
-}
-
-let fahrenheitButton = document.querySelector("#unit-fahrenheit");
-fahrenheitButton.addEventListener("click", convertToFahrenheit);
-
-let celsiusButton = document.querySelector("#unit-celsius");
-celsiusButton.addEventListener("click", convertToCelsius);
-
 //Initial load
 axios
   .get(
