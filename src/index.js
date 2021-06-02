@@ -133,7 +133,7 @@ let celciusTemperature = null;
 function convertToFarenheit(event) {
   event.preventDefault();
   let temperatureValue = document.querySelector("#current-temperature");
-  let farenheitTemperature = Math.round((celciusTemperature * 9) / 5) + 32;
+  let farenheitTemperature = Math.round((celciusTemperature * 9) / 5 + 32);
   temperatureValue.innerHTML = farenheitTemperature;
   celciusButton.classList.remove("active");
   farenheitButton.classList.add("active");
