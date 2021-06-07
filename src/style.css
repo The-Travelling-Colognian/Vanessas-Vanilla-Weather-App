@@ -97,7 +97,7 @@ hr.line {
   font-size: 16px;
 }
 
-span.current-temperature {
+.weather-temperature {
   font-family: "Poppins", sans-serif;
   position: relative;
   right: 10px;
