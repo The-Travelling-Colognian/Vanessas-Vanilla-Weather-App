@@ -110,7 +110,7 @@ span.current-temperature {
   color: #000;
 }
 
-.weather-temperature .units {
+.units {
   position: relative;
   font-size: 16px;
   top: -34px;
