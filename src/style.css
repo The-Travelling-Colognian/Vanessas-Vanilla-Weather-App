@@ -115,9 +115,8 @@ span.current-temperature {
   margin: 0;
 }
 
-a.temperature-unit:hover {
+a {
   text-decoration: none;
-  cursor: pointer;
 }
 
 .celcius {
