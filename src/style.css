@@ -97,10 +97,6 @@ hr.line {
   font-size: 16px;
 }
 
-.current-weather-description:first-letter {
-  text-transform: capitalize;
-}
-
 span.current-temperature {
   font-family: "Poppins", sans-serif;
   position: relative;
