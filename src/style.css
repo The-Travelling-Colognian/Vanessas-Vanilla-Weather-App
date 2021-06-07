@@ -119,6 +119,11 @@ span.current-temperature {
   margin: 0;
 }
 
+.units .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
 a {
   text-decoration: none;
 }
