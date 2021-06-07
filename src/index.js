@@ -147,11 +147,7 @@ function showSearchedCityWeather(response) {
   let weatherDescriptionValue = response.data.weather[0].description;
   weatherDescription.innerHTML = `${weatherDescriptionValue}`;
 
-  axios
-    .get(
-      `${apiForecastUrl}?q=${cityName},${countryCode}&units=metric&appid=${apiKey}`
-    )
-    .then(displayForecast);
+  getForecast(response.data.coord);
 }
 
 function formatHours(timezone, timestamp) {
