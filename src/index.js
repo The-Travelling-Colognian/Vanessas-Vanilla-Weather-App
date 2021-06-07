@@ -63,10 +63,6 @@ function formatDate(timezone) {
   return `${day}, ${date} ${month}, ${hours}:${minutes}`;
 }
 
-let dateElement = document.querySelector("#current-date-time");
-let now = new Date();
-dateElement.innerHTML = formatDate(now);
-
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
