@@ -4,7 +4,7 @@ form {
 
 p {
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color: #000;
 }
 
@@ -163,7 +163,7 @@ a.temperature-unit:hover {
 
 p.weather-details {
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .weather-forecast {
