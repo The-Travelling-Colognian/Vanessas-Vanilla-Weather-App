@@ -121,6 +121,7 @@ function getForecast(coordinates) {
 function showSearchedCityWeather(response) {
   let currentTemp = document.querySelector("#current-temperature");
   currentTemp.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
   //celciusTemperature = currentTemp.innerHTML;
 
   let humidity = document.querySelector("#humidity");
@@ -187,7 +188,7 @@ currentLocationButton.addEventListener("click", currentLocationSearch);
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#current-temperature");
 
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
@@ -199,7 +200,7 @@ function displayCelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#current-temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
