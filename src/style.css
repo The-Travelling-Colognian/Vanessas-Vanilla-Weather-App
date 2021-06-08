@@ -128,44 +128,6 @@ a {
   text-decoration: none;
 }
 
-.celcius {
-  position: relative;
-  right: 10px;
-  bottom: 30px;
-}
-
-.fahrenheit {
-  position: relative;
-  right: 40px;
-  bottom: 5px;
-}
-
-.celcius.active {
-  position: relative;
-  right: 10px;
-  bottom: 25px;
-  font-size: 25px;
-  cursor: default;
-  font-weight: bold;
-}
-
-.fahrenheit.active:hover {
-  text-decoration: none;
-}
-
-.fahrenheit.active {
-  font-size: 25px;
-  cursor: default;
-  font-weight: bold;
-  position: relative;
-  right: 28px;
-  bottom: 5px;
-}
-
-.celcius.active:hover {
-  text-decoration: none;
-}
-
 .col-4.weather-details {
   padding-top: 18px;
 }
