@@ -181,6 +181,10 @@ p.weather-details {
   }
 
   .weather-forecast-date {
-    font-size: 16px;
+    font-size: 13px;
+  }
+
+  .weather-forecast-temperatures {
+    font-size: 13px;
   }
 }
