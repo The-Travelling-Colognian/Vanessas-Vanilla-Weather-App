@@ -188,3 +188,37 @@ p.weather-details {
     font-size: 13px;
   }
 }
+
+@media (max-width: 1024px) {
+  .location {
+    font-size: 36px;
+  }
+
+  .date {
+    font-size: 24px;
+  }
+
+  .current-weather-icon {
+    width: 110px;
+  }
+
+  span.current-temperature {
+    font-size: 74px;
+  }
+
+  .units {
+    font-size: 22px;
+  }
+
+  .current-weather-description {
+    font-size: 22px;
+  }
+
+  .weather-forecast-date {
+    font-size: 20px;
+  }
+
+  .weather-forecast-temperatures {
+    font-size: 19px;
+  }
+}
