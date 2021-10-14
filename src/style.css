@@ -130,6 +130,7 @@ span.current-temperature {
 
 a {
   text-decoration: none;
+  color: rgb(33, 33, 33);
 }
 
 .col-4.weather-details {
@@ -161,7 +162,7 @@ p.weather-details {
 }
 
 .info-text {
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   padding-top: 15px;
   color: #000;
@@ -182,10 +183,12 @@ p.weather-details {
 
   .weather-forecast-date {
     font-size: 13px;
+    position: relative;
   }
 
   .weather-forecast-temperatures {
     font-size: 13px;
+    position: relative;
   }
 }
 
