@@ -185,6 +185,14 @@ p.weather-details {
     top: -20px;
   }
 
+  .location {
+    font-size: 24px;
+  }
+
+  .date {
+    font-size: 16px;
+  }
+
   .weather-forecast-date {
     font-size: 13px;
     position: relative;
