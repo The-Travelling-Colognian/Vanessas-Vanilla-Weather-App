@@ -168,16 +168,20 @@ p.weather-details {
   color: #000;
 }
 
+.info-text a {
+  color: #00c2c2;
+}
+
 @media (max-width: 400px) {
   span.current-temperature {
-    font-size: 40px;
+    font-size: 20px;
     position: relative;
     right: -5px;
   }
 
   .units {
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
     top: -20px;
   }
 
@@ -187,7 +191,7 @@ p.weather-details {
   }
 
   .weather-forecast-temperatures {
-    font-size: 13px;
+    font-size: 12px;
     position: relative;
   }
 }
