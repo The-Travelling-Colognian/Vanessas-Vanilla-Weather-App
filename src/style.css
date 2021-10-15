@@ -172,17 +172,20 @@ p.weather-details {
   color: #00c2c2;
 }
 
-@media (max-width: 400px) {
+@media (min-width: sm) and (max-width: 400px) {
   span.current-temperature {
-    font-size: 20px;
-    position: relative;
+    font-size: 16px;
     right: -5px;
   }
 
   .units {
     position: relative;
-    font-size: 12px;
+    font-size: 10px;
     top: -20px;
+  }
+
+  .icon {
+    left: -25px;
   }
 
   .location {
@@ -194,12 +197,12 @@ p.weather-details {
   }
 
   .weather-forecast-date {
-    font-size: 13px;
+    font-size: 10px;
     position: relative;
   }
 
   .weather-forecast-temperatures {
-    font-size: 12px;
+    font-size: 10px;
     position: relative;
   }
 }
