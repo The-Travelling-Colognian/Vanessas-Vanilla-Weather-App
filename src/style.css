@@ -173,6 +173,9 @@ p.weather-details {
 }
 
 @media (min-width: 280px) and (max-width: 400px) {
+  .search-input {
+    font-size: 9px;
+  }
   span.current-temperature {
     font-size: 30px;
     right: -5px;
@@ -215,7 +218,7 @@ p.weather-details {
   }
 
   .weather-forecast-temperatures {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   img {
